@@ -27,7 +27,6 @@ React components' lifecycle events fall into three broad categories:
 
 * **Initializing / Mounting** e.g. What happens when the component is created? Was an initial state set? Methods:
   - `constructor()`
-    - This is sometimes referred to as a combination of `getInitialState()` and `getDefaultProps()`
   - `componentWillMount()`
   - `componentDidMount()`
   - `render()`
