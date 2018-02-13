@@ -213,13 +213,6 @@ Use [`window.setTimeout`](https://developer.mozilla.org/en-US/docs/Web/API/Windo
 
 `window.setTimeout(this.incrementSpeed, 1000)`: The `incrementSpeed` method is [recursive](https://en.wikipedia.org/wiki/Recursion_(computer_science)) - it invokes itself as the timeout callback. After one second, `window.setTimeout` will call `this.incrementSpeed` again - the `speed` will go up by one, and a new timer will be set to do it again.
 
-## `componentWillReceiveProps(newProps)`
-
-This method is called any time your component receives new props. It is _not_ called with the initial props when your component initially mounts. If you need to change the state of your component based on changes in the props, this is where you do it. In a simple app, you generally won't need `componentWillReceiveProps`.
-
-## `shouldComponentUpdate`, `componentWillUpdate`, `componentDidUpdate`
-
-These methods are called when a component's props or state change, and are generally used for performance optimizations. React is quite fast by itself, and you usually don't need to concern yourself with these methods outside of a large app with many dynamic components.
 
 ## Challenge
 Pull down the starter code in this very repo, and see if you can:
@@ -227,4 +220,10 @@ Pull down the starter code in this very repo, and see if you can:
 1. Modify it to add an event listener to the Car component (e.g. 'click')
 2. Make the background color a new random color each time the component updates.
 
+## `componentWillReceiveProps(newProps)`
 
+This method is called any time your component receives new props. It is _not_ called with the initial props when your component initially mounts. If you need to change the state of your component based on changes in the props, this is where you do it. In a simple app, you generally won't need `componentWillReceiveProps`.
+
+## `shouldComponentUpdate`, `componentWillUpdate`, `componentDidUpdate`
+
+These methods are called when a component's props or state change, and are generally used for performance optimizations. React is quite fast by itself, and you usually don't need to concern yourself with these methods outside of a large app with many dynamic components.
